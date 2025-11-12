@@ -1,55 +1,141 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Patricio Di Lauro | Portfolio</title>
   <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
     body {
       font-family: 'Segoe UI', sans-serif;
       background: #0f172a;
       color: #e2e8f0;
-      margin: 0;
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
-      height: 100vh;
+      min-height: 100vh;
+      padding: 2rem;
+    }
+
+    header {
       text-align: center;
+      margin-top: 4rem;
     }
+
     h1 {
-      font-size: 2.5rem;
-      margin-bottom: 0.3rem;
+      font-size: 2.8rem;
+      margin-bottom: 0.5rem;
     }
+
     h2 {
       font-weight: 400;
       color: #94a3b8;
-      margin-top: 0;
+      margin-bottom: 1.5rem;
     }
-    button {
+
+    nav {
       margin-top: 2rem;
+    }
+
+    nav a {
+      color: #60a5fa;
+      text-decoration: none;
+      margin: 0 1rem;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      max-width: 700px;
+      text-align: center;
+      margin-top: 4rem;
+    }
+
+    .btn {
+      display: inline-block;
       background-color: #2563eb;
       color: white;
-      border: none;
+      text-decoration: none;
       padding: 0.8rem 1.6rem;
       border-radius: 10px;
-      cursor: pointer;
       transition: background 0.3s;
+      margin-top: 1.5rem;
     }
-    button:hover {
+
+    .btn:hover {
       background-color: #1d4ed8;
+    }
+
+    footer {
+      margin-top: auto;
+      padding: 2rem 0;
+      font-size: 0.9rem;
+      color: #64748b;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2rem;
+      }
+      nav a {
+        display: block;
+        margin: 0.5rem 0;
+      }
     }
   </style>
 </head>
 <body>
-  <h1>👋 Hola, soy Patricio Di Lauro</h1>
-  <h2>Software Engineer · Game Developer</h2>
-  <button id="greetBtn">Saludar</button>
+  <header>
+    <h1>Patricio Di Lauro</h1>
+    <h2>Software Engineer · Game Developer</h2>
+    <nav>
+      <a href="#projects">Projects</a>
+      <a href="#resume">Resume</a>
+      <a href="https://www.linkedin.com/in/patricio-di-lauro-4727471a4/" target="_blank">LinkedIn</a>
+    </nav>
+  </header>
+
+  <section id="about">
+    <p>
+      Passionate about software engineering and game development.  
+      Focused on clean architecture, performance optimization, and creating interactive experiences.
+    </p>
+  </section>
+
+  <section id="projects">
+    <h2>Featured Projects</h2>
+    <p>Here you can showcase your published works or repositories.</p>
+    <div>
+      <a class="btn" href="#" target="_blank">🔗 View Project 1</a>
+      <a class="btn" href="#" target="_blank">🔗 View Project 2</a>
+    </div>
+  </section>
+
+  <section id="resume">
+    <h2>Resume</h2>
+    <p>You can check or download my most recent resume below:</p>
+    <a class="btn" href="cv.pdf" target="_blank">📄 View CV (PDF)</a>
+  </section>
+
+  <footer>
+    © 2025 Patricio Di Lauro · Built with ❤️ using GitHub Pages
+  </footer>
 
   <script>
-    document.getElementById("greetBtn").addEventListener("click", () => {
-      alert("¡Gracias por visitar mi página!");
-    });
+    // Small fade-in animation
+    document.body.style.opacity = 0;
+    window.onload = () => {
+      document.body.style.transition = "opacity 1.2s ease";
+      document.body.style.opacity = 1;
+    };
   </script>
 </body>
 </html>
