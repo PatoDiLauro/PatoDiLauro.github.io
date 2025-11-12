@@ -20,26 +20,39 @@
       align-items: center;
       min-height: 100vh;
       padding: 2rem;
+      overflow-x: hidden;
     }
 
     header {
       text-align: center;
-      margin-top: 4rem;
+      margin-top: 3rem;
+      animation: fadeIn 1.5s ease;
+    }
+
+    .profile-pic {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 1.5rem;
+      border: 3px solid #2563eb;
+      box-shadow: 0 0 20px rgba(37, 99, 235, 0.3);
     }
 
     h1 {
-      font-size: 2.8rem;
+      font-size: 2.5rem;
       margin-bottom: 0.5rem;
     }
 
     h2 {
-      font-weight: 400;
-      color: #94a3b8;
+      color: #60a5fa;
+      font-weight: 500;
+      height: 1.4rem;
       margin-bottom: 1.5rem;
     }
 
     nav {
-      margin-top: 2rem;
+      margin-top: 1.5rem;
     }
 
     nav a {
@@ -47,16 +60,18 @@
       text-decoration: none;
       margin: 0 1rem;
       font-weight: 500;
+      transition: color 0.3s;
     }
 
     nav a:hover {
-      text-decoration: underline;
+      color: #93c5fd;
     }
 
     section {
       max-width: 700px;
       text-align: center;
       margin-top: 4rem;
+      animation: fadeUp 1.5s ease;
     }
 
     .btn {
@@ -79,6 +94,17 @@
       padding: 2rem 0;
       font-size: 0.9rem;
       color: #64748b;
+      animation: fadeIn 2s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     @media (max-width: 600px) {
@@ -94,8 +120,10 @@
 </head>
 <body>
   <header>
+    <img src="img/profile.jpg" alt="Profile picture" class="profile-pic" />
     <h1>Patricio Di Lauro</h1>
-    <h2>Software Engineer · Game Developer</h2>
+    <h2 id="typing-text"></h2>
+
     <nav>
       <a href="#projects">Projects</a>
       <a href="#resume">Resume</a>
@@ -105,8 +133,8 @@
 
   <section id="about">
     <p>
-      Passionate about software engineering and game development.  
-      Focused on clean architecture, performance optimization, and creating interactive experiences.
+      Passionate about software engineering and game development.<br>
+      Focused on clean architecture, performance optimization, and crafting engaging interactive experiences.
     </p>
   </section>
 
@@ -130,12 +158,32 @@
   </footer>
 
   <script>
-    // Small fade-in animation
-    document.body.style.opacity = 0;
-    window.onload = () => {
-      document.body.style.transition = "opacity 1.2s ease";
-      document.body.style.opacity = 1;
-    };
+    // Typing effect
+    const roles = ["Software Engineer", "Game Developer", "Problem Solver"];
+    let i = 0, j = 0, current = "", isDeleting = false;
+    const speed = 120;
+    const textElement = document.getElementById("typing-text");
+
+    function type() {
+      current = roles[i];
+      if (isDeleting) {
+        textElement.textContent = current.substring(0, j--);
+        if (j < 0) {
+          isDeleting = false;
+          i = (i + 1) % roles.length;
+        }
+      } else {
+        textElement.textContent = current.substring(0, j++);
+        if (j === current.length + 2) {
+          isDeleting = true;
+          setTimeout(type, 1200);
+          return;
+        }
+      }
+      setTimeout(type, isDeleting ? speed / 2 : speed);
+    }
+
+    type();
   </script>
 </body>
 </html>
