@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Patricio Di Lauro | Portfolio</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #0f172a;
+      color: #e2e8f0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.3rem;
+    }
+    h2 {
+      font-weight: 400;
+      color: #94a3b8;
+      margin-top: 0;
+    }
+    button {
+      margin-top: 2rem;
+      background-color: #2563eb;
+      color: white;
+      border: none;
+      padding: 0.8rem 1.6rem;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    button:hover {
+      background-color: #1d4ed8;
+    }
+  </style>
+</head>
+<body>
+  <h1>👋 Hola, soy Patricio Di Lauro</h1>
+  <h2>Software Engineer · Game Developer</h2>
+  <button id="greetBtn">Saludar</button>
+
+  <script>
+    document.getElementById("greetBtn").addEventListener("click", () => {
+      alert("¡Gracias por visitar mi página!");
+    });
+  </script>
+</body>
+</html>
