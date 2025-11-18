@@ -290,7 +290,12 @@ h3 {
 .link-btn svg {
   width: 18px;
   height: 18px;
-  fill: currentColor;
+  display: inline-block;
+}
+
+/* Force the icons to inherit text color */
+.link-btn svg path {
+  fill: currentColor !important;
 }
 
 /* --------------------------- */
