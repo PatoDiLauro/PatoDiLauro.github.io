@@ -88,7 +88,7 @@ h3 {
 /* --------------------------- */
 .hero {
   text-align: center;
-  padding: 170px 0 80px; /* más espacio por navbar grande */
+  padding: 170px 0 80px; /* espacio extra por navbar */
 }
 
 .profile-pic {
@@ -202,7 +202,7 @@ h3 {
   box-shadow: 0px 8px 30px rgba(58, 123, 213, 0.2);
 }
 
-/* --- IMAGE WITH FIXED SIZE AND AUTO-CROP --- */
+/* IMAGENES DE PROYECTOS */
 .projects img {
   width: 220px;
   height: 150px;
@@ -237,16 +237,60 @@ h3 {
   color: var(--accent);
 }
 
-.project-links a {
-  margin-right: 15px;
-  color: var(--accent);
-  text-decoration: none;
-  font-weight: bold;
-  transition: 0.2s;
+/* --------------------------- */
+/* PROJECT LINK BUTTONS WITH SVG ICONS */
+/* --------------------------- */
+.project-links {
+  margin-top: 15px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
 }
 
-.project-links a:hover {
-  color: var(--accent-hover);
+.link-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.25s;
+}
+
+/* Steam */
+.link-steam {
+  background-color: #1b2838;
+  color: #fff;
+}
+.link-steam:hover {
+  background-color: #14202b;
+}
+
+/* Website */
+.link-web {
+  background-color: #222;
+  color: #fff;
+}
+.link-web:hover {
+  background-color: #333;
+}
+
+/* Play Store */
+.link-play {
+  background-color: var(--accent);
+  color: #fff;
+}
+.link-play:hover {
+  background-color: var(--accent-hover);
+}
+
+/* SVG icons */
+.link-btn svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
 }
 
 /* --------------------------- */
@@ -297,5 +341,9 @@ h3 {
   .projects img {
     width: 100%;
     height: 180px;
+  }
+
+  .navbar .container {
+    gap: 30px;
   }
 }
