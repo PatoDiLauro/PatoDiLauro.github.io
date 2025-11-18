@@ -1,279 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Patricio Di Lauro - Software Engineer / Game Developer</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --color-primary: #007bff; /* Vibrant Blue for emphasis */
-            --color-secondary: #6c757d;
-            --color-dark: #343a40;
-            --color-light: #f8f9fa;
-            --color-background: #ffffff;
-            --color-card-bg: #f8f9fa;
-        }
-
-        body {
-            font-family: 'Roboto', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: var(--color-background);
-            color: var(--color-dark);
-            line-height: 1.6;
-        }
-
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px 0;
-        }
-
-        /* --- Header / Hero --- */
-        header {
-            background-color: var(--color-dark);
-            color: var(--color-light);
-            padding: 60px 0;
-            text-align: center;
-        }
-
-        header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 5px;
-        }
-
-        header p.lead {
-            font-size: 1.25rem;
-            color: var(--color-primary);
-            margin-top: 0;
-        }
-
-        .contact-links a {
-            color: var(--color-light);
-            text-decoration: none;
-            margin: 0 10px;
-            font-weight: 300;
-        }
-
-        .contact-links a:hover {
-            color: var(--color-primary);
-        }
-
-        /* --- About Section --- */
-        #about {
-            padding: 40px 0;
-            text-align: center;
-            background-color: var(--color-card-bg);
-            border-bottom: 3px solid var(--color-primary);
-        }
-
-        #about p {
-            max-width: 800px;
-            margin: 15px auto;
-            font-size: 1.1rem;
-            color: var(--color-secondary);
-        }
-
-        /* --- Projects Section --- */
-        #projects {
-            padding: 60px 0;
-        }
-
-        #projects h2 {
-            text-align: center;
-            margin-bottom: 40px;
-            font-size: 2rem;
-            border-bottom: 2px solid var(--color-primary);
-            display: inline-block;
-            padding-bottom: 5px;
-            width: fit-content;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .project-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .project-card {
-            background-color: var(--color-card-bg);
-            padding: 25px;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        .project-card h3 {
-            color: var(--color-primary);
-            margin-top: 0;
-        }
-
-        .project-card .role {
-            font-style: italic;
-            color: var(--color-secondary);
-            margin-bottom: 15px;
-            display: block;
-        }
-
-        .tech-list {
-            list-style: none;
-            padding: 0;
-            margin-top: 15px;
-        }
-
-        .tech-list li {
-            display: inline-block;
-            background-color: #e9ecef;
-            color: var(--color-dark);
-            padding: 5px 10px;
-            border-radius: 4px;
-            font-size: 0.85rem;
-            margin-right: 5px;
-            margin-bottom: 5px;
-        }
-
-        .project-links {
-            margin-top: 20px;
-        }
-
-        .project-links a {
-            display: inline-block;
-            background-color: var(--color-primary);
-            color: white;
-            padding: 8px 15px;
-            border-radius: 4px;
-            text-decoration: none;
-            margin-right: 10px;
-            transition: background-color 0.3s;
-        }
-
-        .project-links a:hover {
-            background-color: #0056b3;
-        }
-
-        /* --- Footer --- */
-        footer {
-            text-align: center;
-            padding: 20px 0;
-            background-color: var(--color-dark);
-            color: var(--color-secondary);
-            font-size: 0.9rem;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Patricio Di Lauro — Software Engineer</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
 
-    <header>
-        <div class="container">
-            <h1>Patricio Di Lauro</h1>
-            <p class="lead">Software Engineer / Game Developer (Unity, C++, Backend)</p>
-            <p>
-                Software Engineer and Game Developer with strong background in **scalable architecture**, **backend integration** (AWS, Azure, PlayFab, Strapi), and **performance optimization** for WebGL, Mobile, and PC environments.
-            </p>
-            <div class="contact-links">
-                <a href="mailto:patodl2701@gmail.com">Email</a>
-                <a href="https://linkedin.com/in/patricio-di-lauro-4727471a4" target="_blank">LinkedIn</a>
-                <a href="https://github.com/PatoDiLauro" target="_blank">GitHub</a>
-                <a href="[URL_TO_YOUR_CV_PDF]" target="_blank">CV (PDF)</a> 
-            </div>
+  <!-- HERO SECTION -->
+  <header class="hero">
+    <div class="container">
+      <img src="assets/profile.jpg" alt="Profile Picture" class="profile-pic" />
+      <h1>Patricio Di Lauro</h1>
+      <h2>Game Developer • Unity & C# • Unreal Engine & C++</h2>
+      <p class="subtitle">Gameplay, Systems & Performance for Mobile, WebGL, and PC</p>
+
+      <div class="cta">
+        <a href="assets/PatricioDiLauroCV.pdf" class="btn" target="_blank">Download CV</a>
+        <a href="#contact" class="btn btn-secondary">Contact Me</a>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- ABOUT SECTION -->
+  <section id="about" class="about">
+    <div class="container">
+      <h3>About Me</h3>
+      <p>
+        I’m a Game Developer focused on gameplay, systems, and performance.  
+        I enjoy solving technical challenges, building scalable features, and collaborating with design and art teams to deliver polished player experiences.  
+        Experienced in Unity, Unreal Engine, and backend integrations using PlayFab, AWS, and Strapi.
+      </p>
+    </div>
+  </section>
+
+
+  <!-- SKILLS SECTION -->
+  <section id="skills" class="skills">
+    <div class="container">
+      <h3>Skills</h3>
+
+      <div class="skill-category">
+        <h4>Game Development</h4>
+        <p>Unity, C#, Unreal Engine, C++, Gameplay, Systems, UI, Tools</p>
+      </div>
+
+      <div class="skill-category">
+        <h4>Backend & Online</h4>
+        <p>PlayFab, AWS, Strapi, Azure · REST · Leaderboards · Cloud Functions</p>
+      </div>
+
+      <div class="skill-category">
+        <h4>Mobile & Web</h4>
+        <p>Android, iOS, WebGL, Optimization</p>
+      </div>
+
+      <div class="skill-category">
+        <h4>Tools</h4>
+        <p>Git, GitHub Actions, CI/CD, Jira, Trello</p>
+      </div>
+
+      <div class="skill-category">
+        <h4>Profiling & Performance</h4>
+        <p>Unity Profiler, RenderDoc, Unreal Insights</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- PROJECTS SECTION -->
+  <section id="projects" class="projects">
+    <div class="container">
+      <h3>Featured Projects</h3>
+
+      <!-- Rebel Engine -->
+      <div class="project-card">
+        <img src="assets/rebel-engine-placeholder.jpg" alt="Rebel Engine" />
+        <div class="project-info">
+          <h4>Rebel Engine — Seven Leaf Clover</h4>
+          <p>UE4 game project focused on gameplay interaction, modular content, and system-driven mechanics.</p>
+          <ul>
+            <li>Implemented gameplay systems in UE4 using Blueprints and C++ when required.</li>
+            <li>Integrated interaction logic, triggers, and contextual behaviors.</li>
+            <li>Developed rapid prototypes for new mechanics in collaboration with design.</li>
+            <li>Optimized complex Blueprints and reduced unnecessary overhead.</li>
+            <li>Worked closely with design and art teams for asset pipeline integration and gameplay tuning.</li>
+          </ul>
+          <p class="tech">Technologies: Unreal Engine 4, Blueprints, C++, Gameplay Framework</p>
         </div>
-    </header>
+      </div>
 
-    <section id="projects" class="container">
-        <h2>Featured Projects and Technical Solutions</h2>
-        <div class="project-grid">
 
-            <div class="project-card">
-                <h3>Rebel Engine</h3>
-                <span class="role">C++ Developer / Engine Programmer</span>
-                
-                <p><strong>Technical Focus:</strong> C++ Graphics Engine, Low-Level Engineering, and Steam Publishing.</p>
-                <p>
-                    **Challenge:** Designing a C++ engine architecture from scratch capable of efficiently managing the *rendering pipeline* and *gameplay logic*, ensuring integration with low-level graphics APIs and a stable build for Steam release.
-                </p>
-                <p>
-                    **Solution:** Implementation of a proprietary 3D engine in C++ with manual memory management and *threading* for resource optimization. Focus on designing a modular *pipeline* for asset management and automated Steam publishing.
-                </p>
+      <!-- Time Blast -->
+      <div class="project-card">
+        <img src="assets/time-blast-placeholder.jpg" alt="Time Blast – World Renovation" />
+        <div class="project-info">
+          <h4>Time Blast – World Renovation — Pathfinders Studio</h4>
+          <p>Mobile game published on Google Play, featuring mission systems, progression, and live-ops features.</p>
+          <ul>
+            <li>Developed gameplay and UI systems using Unity (C#).</li>
+            <li>Integrated PlayFab for player data, analytics, and live operations.</li>
+            <li>Implemented mission logic and progression flows.</li>
+            <li>Performed performance optimization for mobile devices.</li>
+            <li>Collaborated with design and art teams on iterative feature development.</li>
+          </ul>
+          <p class="tech">Technologies: Unity, C#, PlayFab, Addressables, Mobile Optimization</p>
 
-                <ul class="tech-list">
-                    <li>C++</li>
-                    <li>3D Engine Architecture</li>
-                    <li>Rendering Pipeline</li>
-                    <li>Steam API</li>
-                </ul>
-                <div class="project-links">
-                    <a href="[URL_TO_REBEL_ENGINE_DEMO]" target="_blank">View Demo (Video/Steam)</a>
-                    <a href="https://github.com/PatoDiLauro" target="_blank">Repository (GitHub)</a>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <h3>Time Blast World Renovation</h3>
-                <span class="role">Lead Match-3 Programmer / Backend Integration</span>
-                
-                <p><strong>Technical Focus:</strong> Solid Architecture (MVC/MVVM), Mobile Scalability, and LiveOps.</p>
-                <p>
-                    **Challenge:** Creating a complex and stable match-3 system for mobile devices that is scalable and flexible, while requiring integration and persistence of player progression state with LiveOps services for continuous updates.
-                </p>
-                <p>
-                    **Solution:** Implemented a solid architecture based on **MVC** and **MVVM** patterns to decouple match logic from presentation (UI). Managed player data persistence and live event configuration through **Azure** service integration. Extensive use of **ScriptableObjects** for level and mechanic configuration.
-                </p>
-
-                <ul class="tech-list">
-                    <li>Unity (C#)</li>
-                    <li>MVC / MVVM</li>
-                    <li>Factory Pattern</li>
-                    <li>Azure</li>
-                    <li>PlayFab</li>
-                    <li>ScriptableObjects</li>
-                </ul>
-                <div class="project-links">
-                    <a href="https://play.google.com/store/apps/details?id=com.PathfindersStudio.TimeBlastWorldRenovation" target="_blank">Play on Google Play</a>
-                    <a href="[URL_TO_VIDEO_DEMO]" target="_blank">View Gameplay</a>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <h3>Johanna's Vision (and other WebGL/Mobile Projects)</h3>
-                <span class="role">Frontend Developer / Cross-Platform Developer</span>
-                
-                <p><strong>Technical Focus:</strong> Performance Optimization, Multi-Platform Deployment (WebGL and Mobile).</p>
-                <p>
-                    **Challenge:** Ensuring fluid performance and a consistent user experience (*framerate* and UI *layout*) in low-power environments like WebGL and mobile devices, minimizing load times and memory usage.
-                </p>
-                <p>
-                    **Solution:** Rigorous optimization using the **Unity Profiler** and graphics *batching* techniques to reduce CPU/GPU consumption. Utilized **Canvas Scaler** and **Responsive UI** to ensure correct display across different aspect ratios and resolutions on WebGL and Android/iOS.
-                </p>
-
-                <ul class="tech-list">
-                    <li>Unity (C#, Profiler)</li>
-                    <li>WebGL Deployment</li>
-                    <li>Mobile Optimization</li>
-                    <li>Responsive UI</li>
-                    <li>Asset Bundling</li>
-                </ul>
-                <div class="project-links">
-                    <a href="[URL_TO_JOHANNAS_VISION_DEMO]" target="_blank">Play / View Demo</a>
-                </div>
-            </div>
-
+          <div class="project-links">
+            <a href="https://play.google.com/store/apps/details?id=com.PathfindersStudio.TimeBlastWorldRenovation" target="_blank">Google Play</a>
+          </div>
         </div>
-    </section>
+      </div>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Patricio Di Lauro. Developed with 🤖 Gemini.</p>
+
+      <!-- Un Mundo Sin Videojuegos -->
+      <div class="project-card">
+        <img src="assets/umsv-placeholder.jpg" alt="Un Mundo Sin Videojuegos" />
+        <div class="project-info">
+          <h4>Un Mundo Sin Videojuegos — Pathfinders Studio</h4>
+          <p>Narrative-driven mobile experience focused on decision-making, storytelling, and audiovisual content.</p>
+          <ul>
+            <li>Implemented branching logic and narrative systems in Unity.</li>
+            <li>Developed dynamic UI and event sequencing tools.</li>
+            <li>Integrated audio systems and synchronized them with narrative moments.</li>
+            <li>Optimized scenes and runtime performance for mobile devices.</li>
+            <li>Supported WebGL/Android builds throughout QA and release cycles.</li>
+          </ul>
+          <p class="tech">Technologies: Unity, C#, Mobile UI, Branching Logic, Audio Systems</p>
+
+          <div class="project-links">
+            <a href="https://play.google.com/store/apps/details?id=com.PathfindersStudio.UMSV" target="_blank">Google Play</a>
+          </div>
         </div>
-    </footer>
+      </div>
+
+
+      <!-- Johanna’s Vision -->
+      <div class="project-card">
+        <img src="assets/johannas-vision-placeholder.jpg" alt="Johanna’s Vision" />
+        <div class="project-info">
+          <h4>Johanna’s Vision — TGA</h4>
+          <p>WebGL interactive experience focused on narrative branching, dynamic audiovisual content, and user-driven flow.</p>
+          <ul>
+            <li>Implemented narrative structure and branching logic in Unity.</li>
+            <li>Developed fully responsive UI optimized for WebGL.</li>
+            <li>Integrated dynamic visual and audio content using triggers and state-driven logic.</li>
+            <li>Performed WebGL-focused optimizations (build size, loading times, memory usage).</li>
+            <li>Worked with design teams to refine pacing and narrative transitions.</li>
+          </ul>
+          <p class="tech">Technologies: Unity, C#, WebGL Optimization, UI Systems</p>
+
+          <div class="project-links">
+            <a href="https://home.johannasvision.com/" target="_blank">Website</a>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Mirabilis -->
+      <div class="project-card">
+        <img src="assets/mirabilis-placeholder.jpg" alt="Mirabilis – Guardianes Arcanos" />
+        <div class="project-info">
+          <h4>Mirabilis – Guardianes Arcanos — TGA</h4>
+          <p>Mobile/WebGL game with modular gameplay systems, episodic content, and multi-platform support.</p>
+          <ul>
+            <li>Developed modular gameplay systems in Unity.</li>
+            <li>Implemented cross-platform logic for WebGL and Android builds.</li>
+            <li>Conducted performance optimization (profiling, batching, memory tuning).</li>
+            <li>Supported CI/CD build pipelines for multiple platforms.</li>
+            <li>Collaborated with design and art on gameplay features and integration.</li>
+          </ul>
+          <p class="tech">Technologies: Unity, C#, WebGL, Android, Build Pipelines</p>
+
+          <div class="project-links">
+            <a href="https://play.google.com/store/apps/details?id=com.tga.mirabilisguardianesarcanos" target="_blank">Google Play</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- CONTACT SECTION -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <h3>Contact</h3>
+      <p>Email: <a href="mailto:patodl2701@gmail.com">patodl2701@gmail.com</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/patricio-di-lauro-4727471a4" target="_blank">linkedin.com/in/patricio-di-lauro</a></p>
+      <p>GitHub: <a href="https://github.com/PatoDiLauro" target="_blank">github.com/PatoDiLauro</a></p>
+    </div>
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Patricio Di Lauro — Software Engineer</p>
+    </div>
+  </footer>
 
 </body>
 </html>
